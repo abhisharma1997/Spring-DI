@@ -21,9 +21,20 @@
     </bean>
     <bean id="tech1" class="com.learning.spring.di.pojo.Technologies">
         <property name="name" value="Java"/>
+        <property name="exp">
+            <map>
+                <entry value="2.1" key="Java"/>
+                <entry value="1.2" key="SpringMVC"/>
+            </map>
+        </property>
     </bean>
     <bean id="tech2" class="com.learning.spring.di.pojo.Technologies">
         <property name="name" value="Spring MVC"/>
+        <property name="exp">
+            <map>
+                <entry value="1.2" key="SpringMVC"/>
+            </map>
+        </property>
     </bean>
 
 
