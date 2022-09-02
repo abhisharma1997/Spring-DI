@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--Using Setter Injection-->
+    <bean id="person1" class="com.learning.spring.di.pojo.Person">
+        <property name="id" value="102"/>
+        <property name="name" value="Him"/>
+        <property name="address" ref="adrs"/>
+
+
+    </bean>
+    
+    <bean id="adrs" class="com.learning.spring.di.pojo.Address">
+        <property name="number" value="102"/>
+        <property name="street" value="ABC"/>
+        
+    </bean>
+<!--Constructor Injection-->
+    <bean id="person2" class="com.learning.spring.di.pojo.Person">
+        <constructor-arg name="id" value="103"/>
+        <constructor-arg name="name" value="Abhi"/>
+        <constructor-arg name="address" ref="adrs2"/>
+
+
+    </bean>
+    <bean id="adrs2" class="com.learning.spring.di.pojo.Address">
+        <property name="number" value="103"/>
+        <property name="street" value="DEF"/>
+
+    </bean>
+
+
+
+</beans>
