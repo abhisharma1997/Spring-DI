@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--Constructor Injection-->
+    <bean id="employee" class="com.learning.spring.di.pojo.Employee">
+        <constructor-arg name="id" value="103"/>
+        <constructor-arg name="name" value="Abhi"/>
+        <constructor-arg>
+            <list>
+                <ref bean="tech1"/>
+                <ref bean="tech2"/>
+            </list>
+        </constructor-arg>
+
+
+
+    </bean>
+    <bean id="tech1" class="com.learning.spring.di.pojo.Technologies">
+        <property name="name" value="Java"/>
+    </bean>
+    <bean id="tech2" class="com.learning.spring.di.pojo.Technologies">
+        <property name="name" value="Spring MVC"/>
+    </bean>
+
+
+
+</beans>
